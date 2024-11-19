@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
             position.y + verticalMove
         );
 
+        // Magic numbers go brrrr
         float cameraLeft = mainCamera.transform.position.x - mainCamera.orthographicSize * mainCamera.aspect * .98f;
         float cameraRight = mainCamera.transform.position.x + mainCamera.orthographicSize * mainCamera.aspect * .6f;
         float cameraTop = mainCamera.transform.position.y + mainCamera.orthographicSize * .98f;
@@ -40,7 +41,6 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Trigger enter");
         hp--;
         Destroy(other.gameObject);
     } 

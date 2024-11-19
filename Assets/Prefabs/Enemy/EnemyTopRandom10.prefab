@@ -102,7 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionList:
   - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
-  - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
   - {fileID: 11400000, guid: 25a50fb25b22d694ab0a249aa867bb61, type: 2}
   - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
   - {fileID: 11400000, guid: 3519887d3878abb40907190cabf595e8, type: 2}
