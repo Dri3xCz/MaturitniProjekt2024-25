@@ -10,7 +10,7 @@ public class EnemyFireAction : EnemyAction
         foreach (GameObject projectile in projectiles) {
             Instantiate(projectile, enemy.transform.position, enemy.transform.rotation);
         }
-        enemy.NextAction();
+        nextAction();
     }
 
     public override void Init() {}

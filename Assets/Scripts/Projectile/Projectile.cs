@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     private ProjectileAction currentAction;
 
     void Start() {
+        
+        
         currentAction = Instantiate(actionList[index]);
         currentAction.projectile = this;
         currentAction.Init();

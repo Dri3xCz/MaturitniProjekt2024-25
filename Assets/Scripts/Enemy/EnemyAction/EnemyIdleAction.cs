@@ -11,7 +11,7 @@ public class EnemyIdleAction : EnemyAction
         localTime -= Time.deltaTime;
 
         if (localTime <= 0) {
-            enemy.NextAction();
+            nextAction();
         }
     }
 

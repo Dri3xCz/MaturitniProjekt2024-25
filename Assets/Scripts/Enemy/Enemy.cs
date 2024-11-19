@@ -8,9 +8,7 @@ public class Enemy : MonoBehaviour
     private EnemyAction currentAction;
 
     void Start() {
-        currentAction = Instantiate(actionList[index]);
-        currentAction.enemy = this;
-        currentAction.Init();
+        SetupCurrentAction();
     }
 
     void Update() {
@@ -24,8 +22,13 @@ public class Enemy : MonoBehaviour
         };
         index++;
         Destroy(currentAction);
+        SetupCurrentAction();
+    }
+
+    public void SetupCurrentAction() {
         currentAction = Instantiate(actionList[index]);
         currentAction.enemy = this;
+        currentAction.nextAction = NextAction;
         currentAction.Init();
     }
 }

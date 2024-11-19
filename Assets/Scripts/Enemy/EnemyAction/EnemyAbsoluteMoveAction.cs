@@ -15,7 +15,7 @@ public class EnemyAbsoluteMoveAction : EnemyAction
         );        
 
         if (destination == enemy.transform.position) {
-            enemy.NextAction();
+            nextAction();
         }
     }
 
