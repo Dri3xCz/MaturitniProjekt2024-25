@@ -47,7 +47,7 @@ public class Menu : MonoBehaviour
 
     public void OnVolumeChange() {
         float value = volumeSlider.value;
-        GameManager.getInstance().GameVolume = value;
+        MusicManager.getInstance().GameVolume = value;
         music.ChangeVolume();
     }
 

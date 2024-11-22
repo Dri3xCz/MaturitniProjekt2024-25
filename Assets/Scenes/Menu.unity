@@ -823,6 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae249215bc97104bb4f0e54040c76c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundName: MenuBGM
 --- !u!1 &931571865
 GameObject:
   m_ObjectHideFlags: 0

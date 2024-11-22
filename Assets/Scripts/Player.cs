@@ -28,8 +28,8 @@ public class Player : MonoBehaviour
         );
 
         // Magic numbers go brrrr
-        float cameraLeft = mainCamera.transform.position.x - mainCamera.orthographicSize * mainCamera.aspect * .98f;
-        float cameraRight = mainCamera.transform.position.x + mainCamera.orthographicSize * mainCamera.aspect * .6f;
+        float cameraLeft = mainCamera.transform.position.x - mainCamera.orthographicSize * mainCamera.aspect * .9f;
+        float cameraRight = mainCamera.transform.position.x + mainCamera.orthographicSize * mainCamera.aspect * .4f;
         float cameraTop = mainCamera.transform.position.y + mainCamera.orthographicSize * .98f;
         float cameraBottom = mainCamera.transform.position.y - mainCamera.orthographicSize * .98f;
         Vector3 playerPosition = transform.position;
