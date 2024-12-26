@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c16b442c550dcd34f8fa1854f2e6d72f, type: 3}
-  m_Name: TripleShotgun
+  m_Name: TripleCircle
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   actionList:
-  - {fileID: 11400000, guid: 57206ee46fae7954cbe8e3b49966c55c, type: 2}
+  - {fileID: 11400000, guid: 5e6509f8f3c1b0344bec0499b809df72, type: 2}
   - {fileID: 11400000, guid: 364128e594164d94da6d84a1d2bd009e, type: 2}
-  - {fileID: 11400000, guid: 57206ee46fae7954cbe8e3b49966c55c, type: 2}
+  - {fileID: 11400000, guid: fd2cd8e1c8df1b843b86bd6f6611e254, type: 2}
   - {fileID: 11400000, guid: 364128e594164d94da6d84a1d2bd009e, type: 2}
-  - {fileID: 11400000, guid: 57206ee46fae7954cbe8e3b49966c55c, type: 2}
+  - {fileID: 11400000, guid: 5e6509f8f3c1b0344bec0499b809df72, type: 2}

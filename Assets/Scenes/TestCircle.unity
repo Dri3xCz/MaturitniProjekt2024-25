@@ -844,39 +844,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
       position: {x: -4, y: 6, z: 0}
     nextWaveDelay: 3
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 3
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 9703c231ff9043b428245c278839fada, type: 3}
-      position: {x: 4, y: 6, z: 0}
-    nextWaveDelay: 3
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
-      position: {x: -4, y: 6, z: 0}
-    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
-      position: {x: 4, y: 6, z: 0}
-    nextWaveDelay: 3
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: -3, y: 6, z: 0}
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: 3, y: 6, z: 0}
-    nextWaveDelay: 0.5
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: -3, y: 6, z: 0}
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: 3, y: 6, z: 0}
-    nextWaveDelay: 0.5
 --- !u!4 &1108434330
 Transform:
   m_ObjectHideFlags: 0

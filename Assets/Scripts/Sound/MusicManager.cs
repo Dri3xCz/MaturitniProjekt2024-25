@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 
 public class MusicManager {
+#nullable enable
     private static MusicManager? mm = null;
+#nullable disable
 
     public float GameVolume = .125f;
 
@@ -12,10 +14,6 @@ public class MusicManager {
     };
 
     public static MusicManager getInstance() {
-        if (mm == null) {
-             mm = new MusicManager(); 
-        }
-
-        return mm;
+        return mm ??= new MusicManager();
     }
 }

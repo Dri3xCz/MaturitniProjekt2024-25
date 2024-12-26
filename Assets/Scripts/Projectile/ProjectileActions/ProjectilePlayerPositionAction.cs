@@ -6,8 +6,6 @@ public class ProjectilePlayerPositionAction : ProjectileAction
     public Vector3 offset;
     public int speed;
 
-    private Vector3 direction;
-
     public override void Execute()
     {
         projectile.transform.position += direction * speed * Time.deltaTime;

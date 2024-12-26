@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        HandleMove();    
+        HandleMove();        
     }
 
     void HandleMove() {

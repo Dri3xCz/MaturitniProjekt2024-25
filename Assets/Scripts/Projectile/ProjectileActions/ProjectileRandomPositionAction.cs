@@ -6,8 +6,6 @@ public class ProjectileRandomPositionAction : ProjectileAction
     public int speed;
     public Vector2 shift;
 
-    private Vector3 direction;
-
     public override void Execute()
     {
         projectile.transform.position += direction * speed * Time.deltaTime;

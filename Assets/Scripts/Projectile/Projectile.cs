@@ -5,11 +5,9 @@ public class Projectile : MonoBehaviour
     public ProjectileAction[] actionList;
 
     private int index = 0; 
-    private ProjectileAction currentAction;
+    public ProjectileAction currentAction;
 
-    void Start() {
-        
-        
+    void Start() { 
         currentAction = Instantiate(actionList[index]);
         currentAction.projectile = this;
         currentAction.Init();
