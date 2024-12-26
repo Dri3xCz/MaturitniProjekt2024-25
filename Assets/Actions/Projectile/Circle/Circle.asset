@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Circle
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
   patternType: 0
   count: 10
   offset: 0

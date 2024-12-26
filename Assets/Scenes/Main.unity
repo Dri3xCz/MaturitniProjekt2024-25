@@ -842,11 +842,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7cf689ab63daa4d80baa1940074c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  solidWall: 0
   waves:
   - enemies:
     - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
       position: {x: -4, y: 6, z: 0}
-    nextWaveDelay: 3
+    - enemy: {fileID: 5537250782574335747, guid: 1e2f8c6d58b9afc4a90d306bfc79c218, type: 3}
+      position: {x: 0, y: 10, z: 0}
+    nextWaveDelay: 0.5
+  - enemies:
+    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
+      position: {x: 0, y: 10, z: 0}
+    nextWaveDelay: 2.5
   - enemies:
     - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
       position: {x: 0, y: 6, z: 0}
@@ -877,6 +884,16 @@ MonoBehaviour:
     - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
       position: {x: 3, y: 6, z: 0}
     nextWaveDelay: 0.5
+  - enemies:
+    - enemy: {fileID: 5537250782574335747, guid: 1e2f8c6d58b9afc4a90d306bfc79c218, type: 3}
+      position: {x: 0, y: 10, z: 0}
+    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
+      position: {x: 0, y: 13, z: 0}
+    - enemy: {fileID: 5537250782574335747, guid: 1e2f8c6d58b9afc4a90d306bfc79c218, type: 3}
+      position: {x: 0, y: 16, z: 0}
+    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
+      position: {x: 0, y: 19, z: 0}
+    nextWaveDelay: 0.2
 --- !u!4 &1108434330
 Transform:
   m_ObjectHideFlags: 0

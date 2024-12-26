@@ -1,16 +1,38 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
+public enum WallType {
+    Blue,
+    Red,
+}
 
 public class StageManager : MonoBehaviour
 {
+    public WallType solidWall = WallType.Blue;
+    private List<Wall> subscribedWalls = new();
+
     public Wave[] waves;
     private int index = 0;
     private float currentTime;
+
+    public static StageManager getInstance() {
+        return FindFirstObjectByType<StageManager>();
+    }
 
     void Start() {
         InstatiateWave();         
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            foreach (Wall wall in subscribedWalls)
+            {
+                wall.ChangeState();
+                solidWall = solidWall == WallType.Blue ? WallType.Red : WallType.Blue;
+            }
+        }
+
         if (currentTime >= 0) {
             currentTime -= Time.deltaTime;
             return;
@@ -35,5 +57,13 @@ public class StageManager : MonoBehaviour
         }
 
         currentTime = waves[index].nextWaveDelay;
+    }
+
+    public void AddWall(Wall wall) {
+        subscribedWalls.Add(wall);
+    }
+
+    public void RemoveWall(Wall wall) {
+        subscribedWalls.Remove(wall);
     }
 }

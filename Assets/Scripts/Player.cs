@@ -42,6 +42,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         hp--;
+        if (other.tag == "Wall") {
+            other.gameObject.GetComponent<Wall>().DestoryProperly();
+            return;
+        }
+
         Destroy(other.gameObject);
     } 
 }
