@@ -39,7 +39,7 @@ public class ProjectilePatternAction : ProjectileAction
 
             var newAction = CreateInstance<ProjectileRelativePositionAction>();
             newAction.direction = new Vector3(x, y, 0);
-            newAction.speed = 10;
+            newAction.speed = 5;
 
             if (i == 0) {
                 projectiles.Add(projectile);

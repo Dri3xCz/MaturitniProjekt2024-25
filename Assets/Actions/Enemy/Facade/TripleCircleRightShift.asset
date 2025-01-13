@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16b442c550dcd34f8fa1854f2e6d72f, type: 3}
+  m_Name: TripleCircleRightShift
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  actionList:
+  - {fileID: 11400000, guid: 5e6509f8f3c1b0344bec0499b809df72, type: 2}
+  - {fileID: 11400000, guid: 364128e594164d94da6d84a1d2bd009e, type: 2}
+  - {fileID: 11400000, guid: fe1f91fb7698b724e984d05b307f2f6f, type: 2}
+  - {fileID: 11400000, guid: 364128e594164d94da6d84a1d2bd009e, type: 2}
+  - {fileID: 11400000, guid: 1c74b81a5d6b2324a9aa6fcbb3c9ca74, type: 2}
+  - {fileID: 11400000, guid: 364128e594164d94da6d84a1d2bd009e, type: 2}
+  - {fileID: 11400000, guid: c6591ae999d2da94b800501962a9b028, type: 2}

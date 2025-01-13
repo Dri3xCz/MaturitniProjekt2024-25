@@ -22,7 +22,7 @@ public class Wall : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y - 10 * Time.deltaTime, 0);    
+        transform.position = new Vector3(transform.position.x, transform.position.y - 5 * Time.deltaTime, 0);    
 
         if (transform.position.y < -10) {
             DestoryProperly();              
