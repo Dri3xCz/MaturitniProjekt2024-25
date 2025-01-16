@@ -5,6 +5,12 @@ public class Player : MonoBehaviour
     public int Speed;
     public Camera mainCamera;
     public int hp = 5;
+    public GameObject stageManagerGameObject;
+    private StageManager sm;
+
+    void Start() {
+        sm = stageManagerGameObject.GetComponent<StageManager>();
+    }
 
     void Update()
     {
@@ -42,6 +48,8 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         hp--;
+        sm.multiplayer = 1;
+        sm.UpdateUI();
         if (other.tag == "Wall") {
             other.gameObject.GetComponent<Wall>().DestoryProperly();
             return;
