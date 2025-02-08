@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16b442c550dcd34f8fa1854f2e6d72f, type: 3}
+  m_Name: Arrow
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  actionList:
+  - {fileID: 11400000, guid: 9d880cf66456e6541899e0cf16f72d7e, type: 2}
+  - {fileID: 11400000, guid: 5cd806c99a6fc184ba3da0f36e322088, type: 2}
+  - {fileID: 11400000, guid: 57206ee46fae7954cbe8e3b49966c55c, type: 2}
+  - {fileID: 11400000, guid: 5cd806c99a6fc184ba3da0f36e322088, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 5cd806c99a6fc184ba3da0f36e322088, type: 2}
+  - {fileID: 11400000, guid: 9d880cf66456e6541899e0cf16f72d7e, type: 2}
+  - {fileID: 11400000, guid: 5cd806c99a6fc184ba3da0f36e322088, type: 2}
+  - {fileID: 11400000, guid: 9d880cf66456e6541899e0cf16f72d7e, type: 2}
