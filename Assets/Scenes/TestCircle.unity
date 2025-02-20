@@ -842,10 +842,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7cf689ab63daa4d80baa1940074c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  solidWall: 0
   waves:
   - enemies:
     - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
-      position: {x: -4, y: 6, z: 0}
+      position: {x: 0, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
+      position: {x: -3, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
+      position: {x: 3, y: 6, z: 0}
     nextWaveDelay: 3
 --- !u!4 &1108434330
 Transform:
@@ -1081,7 +1086,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.1
+  m_Radius: 0.4316682
 --- !u!50 &1584380722
 Rigidbody2D:
   serializedVersion: 5
