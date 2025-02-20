@@ -1,11 +1,13 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum WallType {
-    Blue,
+    White,
     Red,
 }
 
@@ -14,13 +16,14 @@ public class StageManager : MonoBehaviour
 
     public GameObject menuCanvas; 
     private bool isPaused = false;
+    private bool isPausedFromOutside = false;
     public UIBehaviour scoreTextBehaviour;
     private TextMeshProUGUI scoreTextComponent;
     public UIBehaviour multiplayerTextBehaviour;
     private TextMeshProUGUI multiplayerTextComponent;
 
 
-    public WallType solidWall = WallType.Blue;
+    public WallType solidWall = WallType.Red;
     private List<Wall> subscribedWalls = new();
 
     public Wave[] waves;
@@ -43,16 +46,9 @@ public class StageManager : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && isPausedFromOutside == false)
         {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            (isPaused ? (Action<bool>)ResumeGame : PauseGame)(true); 
         }
 
         scoreTickTime -= Time.deltaTime;
@@ -62,11 +58,11 @@ public class StageManager : MonoBehaviour
             scoreTextComponent.text = score.ToString();
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && !isPaused) {
+        if (Input.GetKeyDown(KeyCode.Space) && (!isPaused || isPausedFromOutside)) {
             foreach (Wall wall in subscribedWalls)
             {
                 wall.ChangeState();
-                solidWall = solidWall == WallType.Blue ? WallType.Red : WallType.Blue;
+                solidWall = solidWall == WallType.White ? WallType.Red : WallType.White;
             }
         }
 
@@ -82,12 +78,10 @@ public class StageManager : MonoBehaviour
 
         index++;
         InstatiateWave();
-        multiplayer++;
-        multiplayerTextComponent.text = multiplayer.ToString();
     }
 
     private void InstatiateWave() {
-        foreach (WaveEnemy waveEnemy in waves[index].enemies) {
+        foreach (SpawnableObject waveEnemy in waves[index].enemies) {
             Instantiate(
                 waveEnemy.enemy,
                 waveEnemy.position,
@@ -96,6 +90,10 @@ public class StageManager : MonoBehaviour
         }
 
         currentTime = waves[index].nextWaveDelay;
+        if (waves[index].shouldAwardMultiplier) {
+            multiplayer++;
+            multiplayerTextComponent.text = multiplayer.ToString();
+        }
     }
 
     public void AddWall(Wall wall) {
@@ -111,17 +109,25 @@ public class StageManager : MonoBehaviour
         multiplayerTextComponent.text = multiplayer.ToString();
     }
 
-    public void PauseGame()
+    public void PauseGame(bool showMenu = false)
     {
-        menuCanvas.SetActive(true); 
+        if (showMenu) {
+            menuCanvas.SetActive(true); 
+        } else {
+            isPausedFromOutside = true;
+        }
         Time.timeScale = 0f;        
         isPaused = true;
         AudioListener.pause = true;
     }
 
-    public void ResumeGame()
+    public void ResumeGame(bool showMenu = false)
     {
-        menuCanvas.SetActive(false);
+        if (showMenu) {
+            menuCanvas.SetActive(false);
+        } else {
+            isPausedFromOutside = false;
+        }
         Time.timeScale = 1f;         
         isPaused = false;
         AudioListener.pause = false;

@@ -1,6 +1,7 @@
 [System.Serializable]
 public class Wave
 {
-    public WaveEnemy[] enemies;
+    public SpawnableObject[] enemies;
     public float nextWaveDelay;
+    public bool shouldAwardMultiplier = true;
 }
