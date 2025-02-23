@@ -11,7 +11,6 @@ public enum WallType {
 
 public class StageManager : MonoBehaviour
 {
-
     public GameObject menuCanvas; 
     private bool isPaused = false;
     private bool isPausedFromOutside = false;
@@ -33,6 +32,8 @@ public class StageManager : MonoBehaviour
     private int index = 0;
     private float currentTime;
 
+    private CameraShake cameraShake;
+
     public static StageManager getInstance() {
         return FindFirstObjectByType<StageManager>();
     }
@@ -40,6 +41,7 @@ public class StageManager : MonoBehaviour
     void Start() {
         scoreTextComponent = scoreTextBehaviour.GetComponent<TextMeshProUGUI>();
         multiplayerTextComponent = multiplayerTextBehaviour.GetComponent<TextMeshProUGUI>();
+        cameraShake = CameraShake.getInstance();
         InstatiateWave();    
     }
 
@@ -134,5 +136,9 @@ public class StageManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ShakeCamera() {
+        cameraShake.Shake();
     }
 }

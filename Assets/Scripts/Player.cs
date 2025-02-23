@@ -6,10 +6,10 @@ public class Player : MonoBehaviour
     public Camera mainCamera;
     public int hp = 5;
     public ParticleSystem onDeath;
-    private StageManager sm;
     public bool invincible = false;
     private AudioSource audioSource;
     private new Animation animation;
+    private StageManager sm;
 
     void Start() {
         sm = StageManager.getInstance();
@@ -70,5 +70,7 @@ public class Player : MonoBehaviour
         onDeath.Play();
         audioSource.Play();
         animation.Play();
+
+        sm.ShakeCamera();
     }
 }
