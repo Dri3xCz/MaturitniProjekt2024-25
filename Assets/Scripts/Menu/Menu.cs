@@ -12,10 +12,10 @@ public class Menu : MonoBehaviour
     public UIBehaviour volumeText;
     public UIBehaviour quit;
 
-    public Music music;
+    public SoundPlayer music;
 
     void Start() {
-        music = GameObject.FindGameObjectWithTag("Music").GetComponent<Music>();
+        music = GameObject.FindGameObjectWithTag("Music").GetComponent<SoundPlayer>();
     }
 
     public void OnClickPlayGame() {

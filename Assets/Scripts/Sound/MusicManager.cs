@@ -11,6 +11,7 @@ public class MusicManager {
         {"MenuBGM", 1},
         {"StageOne", .5f},
         {"Fire1", .8f},
+        {"PlayerHit", 1}
     };
 
     public static MusicManager getInstance() {

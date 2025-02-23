@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Music : MonoBehaviour
+public class SoundPlayer : MonoBehaviour
 {
     public string soundName;
 

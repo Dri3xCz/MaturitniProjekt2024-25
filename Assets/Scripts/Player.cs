@@ -5,11 +5,16 @@ public class Player : MonoBehaviour
     public int Speed;
     public Camera mainCamera;
     public int hp = 5;
-    public GameObject stageManagerGameObject;
+    public ParticleSystem onDeath;
     private StageManager sm;
+    public bool invincible = false;
+    private AudioSource audioSource;
+    private new Animation animation;
 
     void Start() {
-        sm = stageManagerGameObject.GetComponent<StageManager>();
+        sm = StageManager.getInstance();
+        audioSource = GetComponent<AudioSource>();
+        animation = GetComponent<Animation>();
     }
 
     void Update()
@@ -47,14 +52,23 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if (invincible) return;
+
+        HandleHitVisuals();
         hp--;
         sm.multiplayer = 1;
         sm.UpdateUI();
         if (other.tag == "Wall") {
-            other.gameObject.GetComponent<Wall>().DestoryProperly();
+            other.gameObject.GetComponent<Wall>().DestroyProperly();
             return;
         }
 
         Destroy(other.gameObject);
-    } 
+    }
+
+    private void HandleHitVisuals() {
+        onDeath.Play();
+        audioSource.Play();
+        animation.Play();
+    }
 }

@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public enum WallType {
     White,
@@ -24,9 +22,9 @@ public class StageManager : MonoBehaviour
 
 
     public WallType solidWall = WallType.Red;
-    private List<Wall> subscribedWalls = new();
+    private readonly List<Wall> subscribedWalls = new();
 
-    public Wave[] waves;
+    public Wave[] waves; 
 
     public int score;
     public int multiplayer;

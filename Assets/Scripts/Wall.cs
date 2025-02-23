@@ -25,7 +25,7 @@ public class Wall : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y - 5 * Time.deltaTime, 0);    
 
         if (transform.position.y < -10) {
-            DestoryProperly();              
+            DestroyProperly();              
         }
     }
 
@@ -35,7 +35,7 @@ public class Wall : MonoBehaviour
         bc.enabled = state;
     }
 
-    public void DestoryProperly() {
+    public void DestroyProperly() {
         sm.RemoveWall(this);
         Destroy(this.gameObject);
     }
