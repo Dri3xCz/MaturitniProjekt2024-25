@@ -11,7 +11,8 @@ public enum WallType {
 
 public class StageManager : MonoBehaviour
 {
-    public GameObject menuCanvas; 
+    public Canvas menuCanvas; 
+    public Canvas settingsCanvas; 
     private bool isPaused = false;
     private bool isPausedFromOutside = false;
     public UIBehaviour scoreTextBehaviour;
@@ -109,10 +110,15 @@ public class StageManager : MonoBehaviour
         multiplayerTextComponent.text = multiplayer.ToString();
     }
 
+    public void OnSettingsClicked() {
+        menuCanvas.gameObject.SetActive(!menuCanvas.isActiveAndEnabled);
+        settingsCanvas.gameObject.SetActive(!settingsCanvas.isActiveAndEnabled);
+    }
+
     public void PauseGame(bool showMenu = false)
     {
         if (showMenu) {
-            menuCanvas.SetActive(true); 
+            menuCanvas.gameObject.SetActive(true); 
         } else {
             isPausedFromOutside = true;
         }
@@ -124,7 +130,7 @@ public class StageManager : MonoBehaviour
     public void ResumeGame(bool showMenu = false)
     {
         if (showMenu) {
-            menuCanvas.SetActive(false);
+            menuCanvas.gameObject.SetActive(false);
         } else {
             isPausedFromOutside = false;
         }

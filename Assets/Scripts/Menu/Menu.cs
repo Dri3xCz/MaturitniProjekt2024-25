@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,12 +8,12 @@ public class Menu : MonoBehaviour
     public Toggle toggleScreenShake;
     public Canvas mainCanvas;
     public Canvas settingsCanvas;
-    public SoundPlayer music;
     private Settings settings;
 
     void Start() {
-        music = GameObject.FindGameObjectWithTag("Music").GetComponent<SoundPlayer>();
         settings = Settings.GetInstance();
+        volumeSlider.value = settings.Volume;
+        toggleScreenShake.isOn = settings.ShouldScreenShake;
     }
 
     public void OnClickPlayGame() {

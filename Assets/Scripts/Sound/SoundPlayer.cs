@@ -20,4 +20,9 @@ public class SoundPlayer : MonoBehaviour
     public void ChangeVolume() {
         audioSource.volume = settings.Volume * volumeConstant;
     }
+
+    private void OnDestroy()
+    {
+        settings.UnsubscribeFromChanges(ChangeVolume);
+    }
 }

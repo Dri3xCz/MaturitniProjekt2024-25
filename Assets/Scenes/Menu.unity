@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 6035879}
-  toggleScreenShake: {fileID: 0}
+  toggleScreenShake: {fileID: 1925182210}
   mainCanvas: {fileID: 1194876778}
   settingsCanvas: {fileID: 34938576}
   music: {fileID: 0}
