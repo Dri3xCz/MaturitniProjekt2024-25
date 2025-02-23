@@ -8,16 +8,32 @@ public class CameraShake {
   public static CameraShake getInstance() => 
     instance ??= Init();
 
-  private CameraShake(Camera camera) {
+  private bool shouldScreenShake;
+  private Settings settings;
+
+  private void UpdateSettings() {
+    shouldScreenShake = settings.ShouldScreenShake;
+  }
+
+  private CameraShake(Camera camera, Settings settings) {
     this.camera = camera;
+    this.settings = settings;
   }
 
   private static CameraShake Init() {
+    Settings settings = Settings.GetInstance();
     Camera camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-    return new CameraShake(camera);
+
+    CameraShake cameraShake = new CameraShake(camera, settings);
+    settings.SubscribeToChanges(cameraShake.UpdateSettings);
+    cameraShake.UpdateSettings();
+
+    return cameraShake;
   }
 
   public void Shake() {
+    if (!shouldScreenShake) return;
+
     camera.GetComponent<Animation>().Play(); 
   }  
 }

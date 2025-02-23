@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public UIBehaviour playGame;
-    public UIBehaviour settings;
     public Slider volumeSlider;
-    public UIBehaviour back;
-    public UIBehaviour volumeText;
-    public UIBehaviour quit;
-
+    public Toggle toggleScreenShake;
+    public Canvas mainCanvas;
+    public Canvas settingsCanvas;
     public SoundPlayer music;
+    private Settings settings;
 
     void Start() {
         music = GameObject.FindGameObjectWithTag("Music").GetComponent<SoundPlayer>();
+        settings = Settings.GetInstance();
     }
 
     public void OnClickPlayGame() {
@@ -28,27 +27,22 @@ public class Menu : MonoBehaviour
     }
 
     public void OnClickSetting() {
-        playGame.gameObject.SetActive(false);
-        settings.gameObject.SetActive(false);
-        back.gameObject.SetActive(true);
-        volumeSlider.gameObject.SetActive(true);
-        volumeText.gameObject.SetActive(true);
-        quit.gameObject.SetActive(false);
+        mainCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(true);
     }
 
     public void OnClickBack() {
-        playGame.gameObject.SetActive(true);
-        settings.gameObject.SetActive(true);
-        back.gameObject.SetActive(false);
-        volumeSlider.gameObject.SetActive(false);
-        volumeText.gameObject.SetActive(false);
-        quit.gameObject.SetActive(true);
+        mainCanvas.gameObject.SetActive(true);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    public void OnScreenShakeChange() {
+        settings.ShouldScreenShake = toggleScreenShake.isOn;
     }
 
     public void OnVolumeChange() {
         float value = volumeSlider.value;
-        MusicManager.getInstance().GameVolume = value;
-        music.ChangeVolume();
+        settings.Volume = value;
     }
 
     public void OnClickQuit() {
