@@ -4,6 +4,7 @@ public class Wall : MonoBehaviour
 {
     public WallType type;
     public bool state;
+    public Vector3 direction;
     private StageManager sm;
     private SpriteRenderer sr;
     private BoxCollider2D bc;
@@ -22,9 +23,13 @@ public class Wall : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y - 5 * Time.deltaTime, 0);    
+        transform.position = new Vector3(
+            transform.position.x * direction.x * Time.deltaTime,
+            transform.position.y + direction.y * Time.deltaTime,
+            0
+        );    
 
-        if (transform.position.y < -10) {
+        if (transform.position.y < -10 || Mathf.Abs(transform.position.x) > 10) {
             DestroyProperly();              
         }
     }

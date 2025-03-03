@@ -2759,27 +2759,27 @@ MonoBehaviour:
     nextWaveDelay: 0
     shouldAwardMultiplier: 0
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
       position: {x: -4, y: 6, z: 0}
     nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
       position: {x: -2, y: 6, z: 0}
     nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
       position: {x: 0, y: 6, z: 0}
     nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
       position: {x: 2, y: 6, z: 0}
     nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
       position: {x: 4, y: 6, z: 0}
     nextWaveDelay: 1
     shouldAwardMultiplier: 1
@@ -2830,6 +2830,66 @@ MonoBehaviour:
     - enemy: {fileID: 6043989557360223122, guid: cacf167388286d64dbb05d641eef8640, type: 3}
       position: {x: 0, y: 6, z: 0}
     nextWaveDelay: 3
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 3
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 3
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 1
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 3
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 1.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 3844381073739690811, guid: a3e09770c55f863448b9aac069abde19, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 0
+    shouldAwardMultiplier: 0
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
+      position: {x: -4, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
+      position: {x: -2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 5537250782574335747, guid: 1e2f8c6d58b9afc4a90d306bfc79c218, type: 3}
+      position: {x: 4, y: 6, z: 0}
+    nextWaveDelay: 0
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
+      position: {x: 2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 4970a8c734042f44da91628e34b61cb5, type: 3}
+      position: {x: 4, y: 6, z: 0}
+    nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   score: 0
   multiplayer: 1
