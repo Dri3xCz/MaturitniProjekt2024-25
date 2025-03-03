@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e6c43b501cd6ca458153b622267f53b, type: 3}
-  m_Name: ShotgunPlayer
+  m_Script: {fileID: 11500000, guid: 00efdf0da567e7a478a8dc21903df926, type: 3}
+  m_Name: 33ms
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  projectiles:
-  - {fileID: 5508498503727983251, guid: e91fa7f46216dc44b935c6871d3aa860, type: 3}
+  length: 0.33

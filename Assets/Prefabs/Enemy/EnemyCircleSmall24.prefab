@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6854886503294580337}
   - component: {fileID: 3902049980710877424}
   m_Layer: 0
-  m_Name: EnemyCircle
+  m_Name: EnemyCircleSmall24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,8 @@ MonoBehaviour:
   actionList:
   - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
   - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
-  - {fileID: 11400000, guid: a41018aacc0ab2f4bb0b4a9641a36e48, type: 2}
+  - {fileID: 11400000, guid: 787ec342e488c354ebdd4334259cae5c, type: 2}
+  - {fileID: 11400000, guid: e61cf64601d99e84598d073c6aa89473, type: 2}
   - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
   - {fileID: 11400000, guid: 3519887d3878abb40907190cabf595e8, type: 2}
   - {fileID: 11400000, guid: 3519887d3878abb40907190cabf595e8, type: 2}

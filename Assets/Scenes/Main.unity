@@ -1908,8 +1908,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6ef84539fd3dc2342930527438f59ee7, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6ef84539fd3dc2342930527438f59ee7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 27753cb572e59a045b7a74ef33cd8762, type: 3}
+  m_Resource: {fileID: 8300000, guid: 27753cb572e59a045b7a74ef33cd8762, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.12
   m_Pitch: 1
@@ -2751,7 +2751,12 @@ MonoBehaviour:
   - enemies:
     - enemy: {fileID: 8160133374964772601, guid: 4eac797be2b95984085dbabb8df3abc6, type: 3}
       position: {x: 0, y: 0, z: 0}
-    nextWaveDelay: 2
+    nextWaveDelay: 1
+    shouldAwardMultiplier: 0
+  - enemies:
+    - enemy: {fileID: 8320432654151388689, guid: 8de62db63e0052147822d17642f40f59, type: 3}
+      position: {x: 0, y: 0, z: 0}
+    nextWaveDelay: 0
     shouldAwardMultiplier: 0
   - enemies:
     - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
@@ -2759,31 +2764,62 @@ MonoBehaviour:
     nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 8320432654151388689, guid: 8de62db63e0052147822d17642f40f59, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 0
-    shouldAwardMultiplier: 0
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: -2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
       position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: 2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: 4, y: 6, z: 0}
     nextWaveDelay: 1
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 3844381073739690811, guid: a3e09770c55f863448b9aac069abde19, type: 3}
-      position: {x: 0, y: 0, z: 0}
-    nextWaveDelay: 0
-    shouldAwardMultiplier: 0
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: 4, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: 2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
       position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: -2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: 6826f65cf4183344ea0a216a87d6fb2f, type: 3}
+      position: {x: -4, y: 6, z: 0}
     nextWaveDelay: 3
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 9703c231ff9043b428245c278839fada, type: 3}
+    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dea56dcdd24085e419ed172cc94c00b8, type: 3}
+      position: {x: -4, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dea56dcdd24085e419ed172cc94c00b8, type: 3}
       position: {x: 4, y: 6, z: 0}
     nextWaveDelay: 3
     shouldAwardMultiplier: 1
   - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: dea56dcdd24085e419ed172cc94c00b8, type: 3}
+      position: {x: 0, y: 6, z: 0}
     - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
       position: {x: -4, y: 6, z: 0}
     - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
@@ -2791,44 +2827,9 @@ MonoBehaviour:
     nextWaveDelay: 3
     shouldAwardMultiplier: 1
   - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
+    - enemy: {fileID: 6043989557360223122, guid: cacf167388286d64dbb05d641eef8640, type: 3}
       position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 5
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 5537250782574335747, guid: 1e2f8c6d58b9afc4a90d306bfc79c218, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 1
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 5537250782574335747, guid: 8d6363d09dc3e604590b418530cbf6cf, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 1
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: b762abe94e6a02b40b4c015ded107fe6, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 6
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 2
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 2
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 2
-    shouldAwardMultiplier: 1
-  - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: 0adc4c6758a199749a3ea6b0ccda6c39, type: 3}
-      position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 2
+    nextWaveDelay: 3
     shouldAwardMultiplier: 1
   score: 0
   multiplayer: 1
@@ -3797,7 +3798,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.4
+  m_Radius: 0.38
 --- !u!50 &1584380722
 Rigidbody2D:
   serializedVersion: 5

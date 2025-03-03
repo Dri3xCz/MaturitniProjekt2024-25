@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6854886503294580337}
   - component: {fileID: 3902049980710877424}
   m_Layer: 0
-  m_Name: EnemyShotgunRight
+  m_Name: EnemyRandom10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionList:
   - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
+  - {fileID: 11400000, guid: 25a50fb25b22d694ab0a249aa867bb61, type: 2}
   - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
-  - {fileID: 11400000, guid: 91e5018f29a29b646bc8c83d78b48b58, type: 2}
-  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
-  - {fileID: 11400000, guid: 01078cfb7732d624caf20c1598292dcc, type: 2}
+  - {fileID: 11400000, guid: 3519887d3878abb40907190cabf595e8, type: 2}

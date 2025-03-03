@@ -8,6 +8,7 @@ public class MusicManager {
         {"MenuBGM", 1},
         {"StageOne", .5f},
         {"Fire1", .8f},
+        {"Fire2", .1f},
         {"PlayerHit", 1}
     };
 

@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e6c43b501cd6ca458153b622267f53b, type: 3}
-  m_Name: ShotgunBiggetOffsetPlayer
+  m_Name: SmallCircleOff1
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   projectiles:
-  - {fileID: 5508498503727983251, guid: a16bcdd114d6df5479a41d0c0cee7bf2, type: 3}
-  - {fileID: 5508498503727983251, guid: f6dbf1f709640c84cbdd0d90b191c560, type: 3}
-  - {fileID: 5508498503727983251, guid: ddc9c7c3c22a4154cac4db1dc2c3798e, type: 3}
+  - {fileID: 5508498503727983251, guid: 0e6533c6b801f6948acb862b554c0a92, type: 3}
