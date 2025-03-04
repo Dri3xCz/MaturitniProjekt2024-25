@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public enum WallType {
     White,
@@ -34,15 +35,18 @@ public class StageManager : MonoBehaviour
     private float currentTime;
 
     private CameraShake cameraShake;
+    public Settings settings;
 
     public static StageManager getInstance() {
         return FindFirstObjectByType<StageManager>();
     }
 
     void Start() {
+        Cursor.visible = false;
         scoreTextComponent = scoreTextBehaviour.GetComponent<TextMeshProUGUI>();
         multiplayerTextComponent = multiplayerTextBehaviour.GetComponent<TextMeshProUGUI>();
-        cameraShake = CameraShake.getInstance();
+        cameraShake = CameraShake.GetInstance();
+        settings = Settings.GetInstance();
         InstatiateWave();    
     }
 
@@ -82,7 +86,14 @@ public class StageManager : MonoBehaviour
     }
 
     private void InstatiateWave() {
-        foreach (SpawnableObject waveEnemy in waves[index].enemies) {
+        Wave currentWave = waves[index];
+
+        if (currentWave.isTutorial && !settings.ShouldShowTutorial) {
+            currentTime = currentWave.nextWaveDelay;
+            return;
+        }
+
+        foreach (SpawnableObject waveEnemy in currentWave.enemies) {
             Instantiate(
                 waveEnemy.enemy,
                 waveEnemy.position,
@@ -90,8 +101,8 @@ public class StageManager : MonoBehaviour
             );
         }
 
-        currentTime = waves[index].nextWaveDelay;
-        if (waves[index].shouldAwardMultiplier) {
+        currentTime = currentWave.nextWaveDelay;
+        if (currentWave.shouldAwardMultiplier) {
             multiplayer++;
             multiplayerTextComponent.text = multiplayer.ToString();
         }
@@ -118,6 +129,7 @@ public class StageManager : MonoBehaviour
     public void PauseGame(bool showMenu = false)
     {
         if (showMenu) {
+            Cursor.visible = true;
             menuCanvas.gameObject.SetActive(true); 
         } else {
             isPausedFromOutside = true;
@@ -130,7 +142,9 @@ public class StageManager : MonoBehaviour
     public void ResumeGame(bool showMenu = false)
     {
         if (showMenu) {
+            Cursor.visible = false;
             menuCanvas.gameObject.SetActive(false);
+            settingsCanvas.gameObject.SetActive(false);
         } else {
             isPausedFromOutside = false;
         }
@@ -142,6 +156,13 @@ public class StageManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ExitToMenu() {
+        ResumeGame();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex - 1;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
     public void ShakeCamera() {

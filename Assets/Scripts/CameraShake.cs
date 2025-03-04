@@ -5,7 +5,7 @@ public class CameraShake {
   private static CameraShake? instance;
 #nullable disable
   private Camera camera;
-  public static CameraShake getInstance() => 
+  public static CameraShake GetInstance() => 
     instance ??= Init();
 
   private bool shouldScreenShake;

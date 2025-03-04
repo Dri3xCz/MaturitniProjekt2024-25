@@ -5,11 +5,16 @@ public class Wall : MonoBehaviour
     public WallType type;
     public bool state;
     public Vector3 direction;
+    public bool isVertical;
     private StageManager sm;
     private SpriteRenderer sr;
     private BoxCollider2D bc;
 
     void Start() {
+        if (isVertical) {
+            GetComponent<Transform>().Rotate(new Vector3(0, 0, 90));
+        }
+
         sm = StageManager.getInstance();
         sm.AddWall(this);
         state = sm.solidWall == type;
@@ -24,7 +29,7 @@ public class Wall : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(
-            transform.position.x * direction.x * Time.deltaTime,
+            transform.position.x + direction.x * Time.deltaTime,
             transform.position.y + direction.y * Time.deltaTime,
             0
         );    

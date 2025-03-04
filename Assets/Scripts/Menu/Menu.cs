@@ -6,6 +6,7 @@ public class Menu : MonoBehaviour
 {
     public Slider volumeSlider;
     public Toggle toggleScreenShake;
+    public Toggle toggleShowTutorial;
     public Canvas mainCanvas;
     public Canvas settingsCanvas;
     private Settings settings;
@@ -14,6 +15,7 @@ public class Menu : MonoBehaviour
         settings = Settings.GetInstance();
         volumeSlider.value = settings.Volume;
         toggleScreenShake.isOn = settings.ShouldScreenShake;
+        toggleShowTutorial.isOn = settings.ShouldShowTutorial;
     }
 
     public void OnClickPlayGame() {
@@ -42,6 +44,10 @@ public class Menu : MonoBehaviour
     public void OnVolumeChange() {
         float value = volumeSlider.value;
         settings.Volume = value;
+    }
+
+    public void OnShowTutorialChange() {
+        settings.ShouldShowTutorial = toggleShowTutorial.isOn;
     }
 
     public void OnClickQuit() {
