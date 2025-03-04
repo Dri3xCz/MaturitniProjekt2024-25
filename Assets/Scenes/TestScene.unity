@@ -1795,7 +1795,7 @@ MonoBehaviour:
   solidWall: 1
   waves:
   - enemies:
-    - enemy: {fileID: 1416012826176002180, guid: dae98d0f6c9ad1e45b0efcd604daa505, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: ea1d5f639bcedea48890660de5f57e12, type: 3}
       position: {x: 0, y: 6, z: 0}
     nextWaveDelay: 0
     shouldAwardMultiplier: 0

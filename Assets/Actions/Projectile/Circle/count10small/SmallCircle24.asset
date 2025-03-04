@@ -15,7 +15,8 @@ MonoBehaviour:
   projectile: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   patternType: 0
-  count: 30
+  count: 24
   offset: 0
+  angleStep: 0
   projectiles: []
   projectilePrefab: {fileID: 5508498503727983251, guid: c45ce49cec15f6847bd8d7a09b7ba42b, type: 3}

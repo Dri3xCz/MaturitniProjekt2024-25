@@ -2289,7 +2289,7 @@ MonoBehaviour:
   - enemies:
     - enemy: {fileID: 6043989557360223122, guid: 2688dc5003487f6479277dbb3366d040, type: 3}
       position: {x: 3, y: 6, z: 0}
-    nextWaveDelay: 6
+    nextWaveDelay: 4.5
     shouldAwardMultiplier: 1
     isTutorial: 0
   - enemies:
@@ -2337,7 +2337,73 @@ MonoBehaviour:
   - enemies:
     - enemy: {fileID: 1416012826176002180, guid: dae98d0f6c9ad1e45b0efcd604daa505, type: 3}
       position: {x: 0, y: 6, z: 0}
-    nextWaveDelay: 3
+    nextWaveDelay: 5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: dea56dcdd24085e419ed172cc94c00b8, type: 3}
+      position: {x: -3, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dea56dcdd24085e419ed172cc94c00b8, type: 3}
+      position: {x: 3, y: 6, z: 0}
+    nextWaveDelay: 1
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
+      position: {x: 1, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: 582b2019635bed946bf903de21c76efa, type: 3}
+      position: {x: -1, y: 6, z: 0}
+    nextWaveDelay: 2.5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: b762abe94e6a02b40b4c015ded107fe6, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 4
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 6f5cb32fa194b504e9febf40ebf59e08, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 4
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 1416012826176002180, guid: ea1d5f639bcedea48890660de5f57e12, type: 3}
+      position: {x: 0, y: 6, z: 0}
+    nextWaveDelay: 2.5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 2dadbfd6150ae4541badea41b1e29da7, type: 3}
+      position: {x: -4, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dd7fe3577a7249242b957ecb43f71d80, type: 3}
+      position: {x: 4, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 2dadbfd6150ae4541badea41b1e29da7, type: 3}
+      position: {x: -3, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dd7fe3577a7249242b957ecb43f71d80, type: 3}
+      position: {x: 3, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 2dadbfd6150ae4541badea41b1e29da7, type: 3}
+      position: {x: -2, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dd7fe3577a7249242b957ecb43f71d80, type: 3}
+      position: {x: 2, y: 6, z: 0}
+    nextWaveDelay: 0.5
+    shouldAwardMultiplier: 1
+    isTutorial: 0
+  - enemies:
+    - enemy: {fileID: 6043989557360223122, guid: 2dadbfd6150ae4541badea41b1e29da7, type: 3}
+      position: {x: -1, y: 6, z: 0}
+    - enemy: {fileID: 6043989557360223122, guid: dd7fe3577a7249242b957ecb43f71d80, type: 3}
+      position: {x: 1, y: 6, z: 0}
+    nextWaveDelay: 0.5
     shouldAwardMultiplier: 1
     isTutorial: 0
   score: 0

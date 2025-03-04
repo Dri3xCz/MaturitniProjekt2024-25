@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   projectiles:
-  - {fileID: 5508498503727983251, guid: 17c2f67f786fb9344906b0f5f48196fa, type: 3}
+  - {fileID: 5508498503727983251, guid: f6dbf1f709640c84cbdd0d90b191c560, type: 3}

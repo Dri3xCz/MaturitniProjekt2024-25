@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf9131ba740b9043b58db1a3db09919, type: 3}
-  m_Name: ExactPlayerPosition
+  m_Script: {fileID: 11500000, guid: 372d9dea2ae1d69448969a839f23957f, type: 3}
+  m_Name: ExactPosRD
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
-  deviation: 0
   speed: 5
+  destination: {x: 5, y: -3, z: 0}

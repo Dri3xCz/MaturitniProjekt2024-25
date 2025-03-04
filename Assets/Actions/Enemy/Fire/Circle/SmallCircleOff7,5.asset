@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf9131ba740b9043b58db1a3db09919, type: 3}
-  m_Name: ExactPlayerPosition
+  m_Script: {fileID: 11500000, guid: 1e6c43b501cd6ca458153b622267f53b, type: 3}
+  m_Name: SmallCircleOff7,5
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
-  deviation: 0
-  speed: 5
+  enemy: {fileID: 0}
+  projectiles:
+  - {fileID: 5508498503727983251, guid: 53c6d7f06f299e544bbc8a0330969515, type: 3}
