@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf9131ba740b9043b58db1a3db09919, type: 3}
-  m_Name: ExactPlayerPosition
+  m_Script: {fileID: 11500000, guid: 00efdf0da567e7a478a8dc21903df926, type: 3}
+  m_Name: 3ms
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
-  deviation: 1.5
-  speed: 5
+  enemy: {fileID: 0}
+  length: 0.03

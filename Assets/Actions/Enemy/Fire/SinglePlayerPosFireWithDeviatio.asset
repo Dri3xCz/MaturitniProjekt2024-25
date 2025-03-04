@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf9131ba740b9043b58db1a3db09919, type: 3}
-  m_Name: ExactPlayerPosition
+  m_Script: {fileID: 11500000, guid: 1e6c43b501cd6ca458153b622267f53b, type: 3}
+  m_Name: SinglePlayerPosFireWithDeviatio
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
-  deviation: 1.5
-  speed: 5
+  enemy: {fileID: 0}
+  projectiles:
+  - {fileID: 5508498503727983251, guid: 17c2f67f786fb9344906b0f5f48196fa, type: 3}

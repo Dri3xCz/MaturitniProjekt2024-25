@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5682289655916848945}
   - component: {fileID: 3905725862697761438}
   m_Layer: 0
-  m_Name: EnemySinglefire
+  m_Name: EnemyShotgunFor5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,22 @@ MonoBehaviour:
   actionList:
   - {fileID: 11400000, guid: 03b59c3e17e04324eb30352b4c0e00d6, type: 2}
   - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
-  - {fileID: 11400000, guid: 33a8ef9da5e11fb409a9ec60c0bdc2e9, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
+  - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
+  - {fileID: 11400000, guid: bc5b4675d13a02c4ebff60c4ed567eec, type: 2}
   - {fileID: 11400000, guid: 6711d804a7593cc428b306b334752a42, type: 2}
   - {fileID: 11400000, guid: 3519887d3878abb40907190cabf595e8, type: 2}

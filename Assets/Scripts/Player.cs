@@ -4,7 +4,6 @@ public class Player : MonoBehaviour
 {
     public int Speed;
     public Camera mainCamera;
-    public int hp = 5;
     public ParticleSystem onDeath;
     public bool invincible = false;
     private AudioSource audioSource;
@@ -53,10 +52,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (invincible) return;
-
-        HandleHitVisuals();
-        hp--;
+        
         sm.multiplayer = 1;
+        HandleHitVisuals();
         sm.UpdateUI();
         if (other.tag == "Wall") {
             other.gameObject.GetComponent<Wall>().DestroyProperly();

@@ -36,4 +36,8 @@ public class CameraShake {
 
     camera.GetComponent<Animation>().Play(); 
   }  
+
+  public void Destroy() {
+    instance = null;
+  }
 }

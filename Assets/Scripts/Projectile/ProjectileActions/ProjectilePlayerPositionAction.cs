@@ -4,6 +4,7 @@ using UnityEngine;
 public class ProjectilePlayerPositionAction : ProjectileAction
 {
     public Vector3 offset;
+    public float deviation;
     public int speed;
 
     public override void Execute()
@@ -21,8 +22,13 @@ public class ProjectilePlayerPositionAction : ProjectileAction
     }
 
     public override void Init() {
+        System.Random random = new System.Random();
+
         Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
         direction = playerPos + offset - projectile.transform.position;
+        direction.x += ((float)random.NextDouble() * 2 - 1) * deviation;
+        direction.y += ((float)random.NextDouble() * 2 - 1) * deviation;
+
         direction.Normalize();
     }
 }

@@ -1185,7 +1185,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6ef84539fd3dc2342930527438f59ee7, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6ef84539fd3dc2342930527438f59ee7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.12
@@ -1795,10 +1795,11 @@ MonoBehaviour:
   solidWall: 1
   waves:
   - enemies:
-    - enemy: {fileID: 6043989557360223122, guid: cacf167388286d64dbb05d641eef8640, type: 3}
+    - enemy: {fileID: 1416012826176002180, guid: dae98d0f6c9ad1e45b0efcd604daa505, type: 3}
       position: {x: 0, y: 6, z: 0}
     nextWaveDelay: 0
     shouldAwardMultiplier: 0
+    isTutorial: 0
   score: 0
   multiplayer: 1
 --- !u!4 &1108434330
@@ -2136,7 +2137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 6
   mainCamera: {fileID: 519420031}
-  hp: 5
   onDeath: {fileID: 0}
   invincible: 0
 --- !u!58 &1584380721

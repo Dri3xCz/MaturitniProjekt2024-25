@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2766758223383685315}
   - component: {fileID: -7943911609522413953}
   m_Layer: 0
-  m_Name: ExactPosition
+  m_Name: ExactPositionWithDeviation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,8 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionList:
-  - {fileID: 11400000, guid: b22f771c5e0fc6141aeacdfedceb4e69, type: 2}
-  currentAction: {fileID: 0}
+  - {fileID: 11400000, guid: 8759a5acc3544d843a1f1c588562ec3a, type: 2}
 --- !u!58 &5591822790574557114
 CircleCollider2D:
   m_ObjectHideFlags: 0

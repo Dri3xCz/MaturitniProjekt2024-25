@@ -168,4 +168,9 @@ public class StageManager : MonoBehaviour
     public void ShakeCamera() {
         cameraShake.Shake();
     }
+
+    void OnDestroy()
+    {
+        cameraShake.Destroy();
+    }
 }
