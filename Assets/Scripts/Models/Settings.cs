@@ -10,12 +10,14 @@ public class Settings {
     => instance ??= new Settings(
       PlayerPrefs.HasKey("Volume") ? PlayerPrefs.GetFloat("Volume") : .125f,
       PlayerPrefs.HasKey("ShouldScreenShake") ? PlayerPrefs.GetInt("ShouldScreenShake") == 1 : true,
-      PlayerPrefs.HasKey("ShouldShowTutorial") ? PlayerPrefs.GetInt("ShouldShowTutorial") == 1 : true
+      PlayerPrefs.HasKey("ShouldShowTutorial") ? PlayerPrefs.GetInt("ShouldShowTutorial") == 1 : true,
+      PlayerPrefs.HasKey("FullScreen") ? PlayerPrefs.GetInt("FullScreen") == 1 : true
     );
 
   private bool shouldScreenShake;
   private float volume;
   private bool shouldShowTutorial;
+  private bool fullScreen;
 
   public bool ShouldScreenShake 
   { 
@@ -45,10 +47,30 @@ public class Settings {
     }
   }
 
-  public Settings(float volume, bool shouldScreenShake, bool shouldShowTutorial) {
+  public bool FullScreen
+  { 
+    get => fullScreen;
+    set {
+      fullScreen = value;
+      PlayerPrefs.SetInt("FullScreen", value ? 1 : 0);
+      OnSettingsChanged();
+
+      if (!value)
+      {
+          Screen.SetResolution(1280, 720, FullScreenMode.Windowed);
+      }
+      else
+      {
+          Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, FullScreenMode.FullScreenWindow);
+      }
+    }
+  }
+
+  public Settings(float volume, bool shouldScreenShake, bool shouldShowTutorial, bool fullScreen) {
     Volume = volume;
     ShouldScreenShake = shouldScreenShake;
     ShouldShowTutorial = shouldShowTutorial;
+    FullScreen = fullScreen;
   }
 
   protected virtual void OnSettingsChanged()

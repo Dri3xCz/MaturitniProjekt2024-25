@@ -15,7 +15,7 @@ public class Wall : MonoBehaviour
             GetComponent<Transform>().Rotate(new Vector3(0, 0, 90));
         }
 
-        sm = StageManager.getInstance();
+        sm = StageManager.GetInstance();
         sm.AddWall(this);
         state = sm.solidWall == type;
         

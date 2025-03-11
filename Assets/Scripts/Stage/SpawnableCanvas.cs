@@ -7,7 +7,7 @@ public class SpawnableCanvas : MonoBehaviour {
   private StageManager sm;
 
   void Start() {
-    sm = StageManager.getInstance();
+    sm = StageManager.GetInstance();
     sm.PauseGame();
   }
 

@@ -755,6 +755,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2748617410469694062, guid: 7cc5b3ec3f1f93b49a1a28a0e808df0b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1585749468}
+    - target: {fileID: 2748617410469694062, guid: 7cc5b3ec3f1f93b49a1a28a0e808df0b, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFullScreenChange
+      objectReference: {fileID: 0}
     - target: {fileID: 2846987040332867203, guid: 7cc5b3ec3f1f93b49a1a28a0e808df0b, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
@@ -863,6 +871,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &647915473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2748617410469694062, guid: 7cc5b3ec3f1f93b49a1a28a0e808df0b, type: 3}
+  m_PrefabInstance: {fileID: 647915468}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &931571865
@@ -1275,6 +1294,7 @@ MonoBehaviour:
   volumeSlider: {fileID: 647915472}
   toggleScreenShake: {fileID: 647915471}
   toggleShowTutorial: {fileID: 647915470}
+  toggleFullscreen: {fileID: 647915473}
   mainCanvas: {fileID: 1194876778}
   settingsCanvas: {fileID: 647915469}
 --- !u!4 &1585749469

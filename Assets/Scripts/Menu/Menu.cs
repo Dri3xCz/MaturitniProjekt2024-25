@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
     public Slider volumeSlider;
     public Toggle toggleScreenShake;
     public Toggle toggleShowTutorial;
+    public Toggle toggleFullscreen;
     public Canvas mainCanvas;
     public Canvas settingsCanvas;
     private Settings settings;
@@ -16,6 +17,7 @@ public class Menu : MonoBehaviour
         volumeSlider.value = settings.Volume;
         toggleScreenShake.isOn = settings.ShouldScreenShake;
         toggleShowTutorial.isOn = settings.ShouldShowTutorial;
+        toggleFullscreen.isOn = settings.FullScreen;
     }
 
     public void OnClickPlayGame() {
@@ -52,5 +54,9 @@ public class Menu : MonoBehaviour
 
     public void OnClickQuit() {
         Application.Quit();
+    }
+
+    public void OnFullScreenChange() {
+        settings.FullScreen = toggleFullscreen.isOn;
     }
 }

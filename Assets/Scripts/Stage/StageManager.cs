@@ -18,8 +18,13 @@ public class StageManager : MonoBehaviour
     private bool isPausedFromOutside = false;
     public UIBehaviour scoreTextBehaviour;
     private TextMeshProUGUI scoreTextComponent;
-    public UIBehaviour multiplayerTextBehaviour;
-    private TextMeshProUGUI multiplayerTextComponent;
+    public UIBehaviour multiplierTextBehaviour;
+    public UIBehaviour highScoreTextBehaviour;
+    private TextMeshProUGUI multiplierTextComponent;
+    public TextWobble multiplierTextWobble;
+    public TextWobble multiplierValueTextWobble;
+    public TextWobble scoreTextWobble;
+    public TextWobble scoreValueTextWobble;
 
 
     public WallType solidWall = WallType.Red;
@@ -28,7 +33,11 @@ public class StageManager : MonoBehaviour
     public Wave[] waves; 
 
     public int score;
-    public int multiplayer;
+    public int multiplier;
+    public int highestMultiplier;
+    public int hitCount;
+    private int highscore;
+    private bool isHighscore = false;
     private float scoreTickTime = 1;
 
     private int index = 0;
@@ -37,14 +46,16 @@ public class StageManager : MonoBehaviour
     private CameraShake cameraShake;
     public Settings settings;
 
-    public static StageManager getInstance() {
+    public static StageManager GetInstance() {
         return FindFirstObjectByType<StageManager>();
     }
 
     void Start() {
         Cursor.visible = false;
         scoreTextComponent = scoreTextBehaviour.GetComponent<TextMeshProUGUI>();
-        multiplayerTextComponent = multiplayerTextBehaviour.GetComponent<TextMeshProUGUI>();
+        multiplierTextComponent = multiplierTextBehaviour.GetComponent<TextMeshProUGUI>();
+        highscore = PlayerPrefs.GetInt("hs");
+        highScoreTextBehaviour.GetComponent<TextMeshProUGUI>().text = highscore.ToString();
         cameraShake = CameraShake.GetInstance();
         settings = Settings.GetInstance();
         InstatiateWave();    
@@ -58,9 +69,15 @@ public class StageManager : MonoBehaviour
 
         scoreTickTime -= Time.deltaTime;
         if (scoreTickTime <= 0) {
-            score += 100 * multiplayer;
+            score += 100 * multiplier;
             scoreTickTime = 1;
             scoreTextComponent.text = score.ToString();
+
+            if (score > highscore && !isHighscore) {
+                isHighscore = true;
+                scoreTextWobble.StartWobble();
+                scoreValueTextWobble.StartWobble();
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.Space) && (!isPaused || isPausedFromOutside)) {
@@ -103,8 +120,9 @@ public class StageManager : MonoBehaviour
 
         currentTime = currentWave.nextWaveDelay;
         if (currentWave.shouldAwardMultiplier) {
-            multiplayer++;
-            multiplayerTextComponent.text = multiplayer.ToString();
+            multiplier++;
+            highestMultiplier = highestMultiplier < multiplier ? multiplier : highestMultiplier;
+            multiplierTextComponent.text = multiplier.ToString();
         }
     }
 
@@ -118,7 +136,7 @@ public class StageManager : MonoBehaviour
 
     public void UpdateUI() {
         scoreTextComponent.text = score.ToString();
-        multiplayerTextComponent.text = multiplayer.ToString();
+        multiplierTextComponent.text = multiplier.ToString();
     }
 
     public void OnSettingsClicked() {
@@ -167,6 +185,14 @@ public class StageManager : MonoBehaviour
 
     public void ShakeCamera() {
         cameraShake.Shake();
+    }
+
+    public void OnPlayerHit() {
+        multiplier = 1;
+        hitCount++;
+        UpdateUI();
+        multiplierTextWobble.TriggerGlitchEffect(.5f);
+        multiplierValueTextWobble.TriggerGlitchEffect(.5f);
     }
 
     void OnDestroy()

@@ -21,7 +21,7 @@ public class ProjectileRandomPositionAction : ProjectileAction
     }
 
     public override void Init() {
-        System.Random random = new System.Random();
+        System.Random random = new();
 
         float x = (float)random.NextDouble() * 2 - 1 + shift.x;
         x = Mathf.Abs(x) < .25f ? (x < 0 ? -.25f : .25f) : x;
