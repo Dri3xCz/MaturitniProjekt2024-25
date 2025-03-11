@@ -12,6 +12,9 @@ public enum WallType {
 
 public class StageManager : MonoBehaviour
 {
+    public bool isRandomStage;
+    private int randomStagesCleared = 0;
+    public GameObject randomCanvas;
     public Canvas menuCanvas; 
     public Canvas settingsCanvas; 
     private bool isPaused = false;
@@ -45,6 +48,7 @@ public class StageManager : MonoBehaviour
 
     private CameraShake cameraShake;
     public Settings settings;
+    private System.Random random;
 
     public static StageManager GetInstance() {
         return FindFirstObjectByType<StageManager>();
@@ -54,10 +58,11 @@ public class StageManager : MonoBehaviour
         Cursor.visible = false;
         scoreTextComponent = scoreTextBehaviour.GetComponent<TextMeshProUGUI>();
         multiplierTextComponent = multiplierTextBehaviour.GetComponent<TextMeshProUGUI>();
-        highscore = PlayerPrefs.GetInt("hs");
+        highscore = isRandomStage ? PlayerPrefs.GetInt("hs-random") : PlayerPrefs.GetInt("hs");
         highScoreTextBehaviour.GetComponent<TextMeshProUGUI>().text = highscore.ToString();
         cameraShake = CameraShake.GetInstance();
         settings = Settings.GetInstance();
+        random = new();
         InstatiateWave();    
     }
 
@@ -93,16 +98,16 @@ public class StageManager : MonoBehaviour
             return;
         }
 
-        if (index >= waves.Length - 1) {
-            // Properly endstage here
-            return;
-        }
-
         index++;
         InstatiateWave();
     }
 
     private void InstatiateWave() {
+        if (isRandomStage) {
+            InstatiateWaveRandom();
+            return;
+        }
+
         Wave currentWave = waves[index];
 
         if (currentWave.isTutorial && !settings.ShouldShowTutorial) {
@@ -124,6 +129,22 @@ public class StageManager : MonoBehaviour
             highestMultiplier = highestMultiplier < multiplier ? multiplier : highestMultiplier;
             multiplierTextComponent.text = multiplier.ToString();
         }
+    }
+
+    private void InstatiateWaveRandom() {
+        Wave currentWave = waves[random.Next(0, waves.Length)];
+        currentTime = (float)random.NextDouble() + (2f - (randomStagesCleared < 20 ? randomStagesCleared * .05f : 1));
+        foreach (SpawnableObject waveEnemy in currentWave.enemies) {
+            Instantiate(
+                waveEnemy.enemy,
+                waveEnemy.position,
+                transform.rotation
+            );
+        }
+        multiplier++;
+        highestMultiplier = highestMultiplier < multiplier ? multiplier : highestMultiplier;
+        multiplierTextComponent.text = multiplier.ToString();
+        randomStagesCleared += 1;
     }
 
     public void AddWall(Wall wall) {
@@ -188,11 +209,20 @@ public class StageManager : MonoBehaviour
     }
 
     public void OnPlayerHit() {
+        if (isRandomStage) {
+            Invoke(nameof(InstantiateRandomCanvas), .5f);
+            return;
+        }
+
         multiplier = 1;
         hitCount++;
         UpdateUI();
         multiplierTextWobble.TriggerGlitchEffect(.5f);
         multiplierValueTextWobble.TriggerGlitchEffect(.5f);
+    }
+
+    private void InstantiateRandomCanvas() {
+        Instantiate(randomCanvas);
     }
 
     void OnDestroy()

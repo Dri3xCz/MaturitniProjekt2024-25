@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
     public Toggle toggleFullscreen;
     public Canvas mainCanvas;
     public Canvas settingsCanvas;
+    public Canvas creditsCanvas;
+    public Canvas playgameCanvas;
     private Settings settings;
 
     void Start() {
@@ -20,13 +22,18 @@ public class Menu : MonoBehaviour
         toggleFullscreen.isOn = settings.FullScreen;
     }
 
-    public void OnClickPlayGame() {
+    public void OnClickGamemode(int value) {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
+        int nextSceneIndex = currentSceneIndex + value;
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
+    }
+
+    public void OnClickPlayGame() {
+        mainCanvas.gameObject.SetActive(false);
+        playgameCanvas.gameObject.SetActive(true);
     }
 
     public void OnClickSetting() {
@@ -34,9 +41,16 @@ public class Menu : MonoBehaviour
         settingsCanvas.gameObject.SetActive(true);
     }
 
+    public void OnClickCredits() {
+        mainCanvas.gameObject.SetActive(false);
+        creditsCanvas.gameObject.SetActive(true);
+    }
+
     public void OnClickBack() {
         mainCanvas.gameObject.SetActive(true);
         settingsCanvas.gameObject.SetActive(false);
+        creditsCanvas.gameObject.SetActive(false);
+        playgameCanvas.gameObject.SetActive(false);
     }
 
     public void OnScreenShakeChange() {
