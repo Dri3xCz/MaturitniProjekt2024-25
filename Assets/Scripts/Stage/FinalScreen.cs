@@ -44,6 +44,12 @@ public class FinalScreen : MonoBehaviour {
     {
         if (Time.unscaledTime < currentTime + 1) return;
 
+        if (Input.GetKeyDown(KeyCode.R) && isRandomStage) {
+          sm.ResumeGame();
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+          return;
+        }
+
         if (Input.anyKey) {
           sm.ResumeGame();
           SceneManager.LoadScene(0);
