@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FinalScreen : MonoBehaviour {
     private StageManager sm;
+    private Settings settings;
     public bool isRandomStage = false;
     public UIBehaviour score;
     public UIBehaviour highestMultiplier;
@@ -16,12 +17,14 @@ public class FinalScreen : MonoBehaviour {
     void Start()
     {
         sm = StageManager.GetInstance();
+        settings = Settings.GetInstance();
         Cursor.visible = true;
         sm.PauseGame();
         score.GetComponent<TextMeshProUGUI>().text = sm.score.ToString();
         highestMultiplier.GetComponent<TextMeshProUGUI>().text = sm.highestMultiplier.ToString();
 
         (isRandomStage ? (Action)HandleRandomFinish : HandleStageFinish)();
+        settings.ShouldShowTutorial = isRandomStage ? settings.ShouldShowTutorial : false;
 
         currentTime = Time.unscaledTime;
     }
