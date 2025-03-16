@@ -55,7 +55,6 @@ public class StageManager : MonoBehaviour
     }
 
     void Start() {
-        PlayerPrefs.DeleteAll();
         Cursor.visible = false;
         scoreTextComponent = scoreTextBehaviour.GetComponent<TextMeshProUGUI>();
         multiplierTextComponent = multiplierTextBehaviour.GetComponent<TextMeshProUGUI>();

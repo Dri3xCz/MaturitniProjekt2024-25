@@ -75,6 +75,7 @@ public class Settings {
 
   protected virtual void OnSettingsChanged()
   {
+    PlayerPrefs.Save();
     SettingsChanged?.Invoke();
   }
 

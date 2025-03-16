@@ -34,12 +34,17 @@ public class FinalScreen : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("hs") < sm.score) {
           PlayerPrefs.SetInt("hs", sm.score);
+          PlayerPrefs.Save();
         }
     }
 
     void HandleRandomFinish() {
+        Debug.Log(PlayerPrefs.GetInt("hs-random"));
+        Debug.Log(sm.score);
+
         if (PlayerPrefs.GetInt("hs-random") < sm.score) {
           PlayerPrefs.SetInt("hs-random", sm.score);
+          PlayerPrefs.Save();
         }
     }
 
