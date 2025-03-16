@@ -1,3 +1,4 @@
+using System.Security;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -48,6 +49,8 @@ public class Player : MonoBehaviour
         float stretchY = Mathf.Abs(vertical) > 0 ? stretchFactor : 1f;
         
         targetScale = new Vector3(shrinkFactor / stretchY, shrinkFactor / stretchX, 1f);
+        float targetAngle = Mathf.Atan2(-horizontal, vertical) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), Time.deltaTime * 50f);
     }
 
     transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * lerpSpeed);

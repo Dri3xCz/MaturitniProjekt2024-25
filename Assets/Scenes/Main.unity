@@ -1189,6 +1189,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 0}
   settingsCanvas: {fileID: 0}
   creditsCanvas: {fileID: 0}
+  playgameCanvas: {fileID: 0}
 --- !u!4 &680126198
 Transform:
   m_ObjectHideFlags: 0
@@ -3122,7 +3123,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 4334783836991956000, guid: 93c86cc79fa47f64591dc93bfe576357, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

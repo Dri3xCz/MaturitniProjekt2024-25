@@ -50,7 +50,7 @@ public class FinalScreen : MonoBehaviour {
           return;
         }
 
-        if (Input.anyKey) {
+        if (Input.anyKeyDown) {
           sm.ResumeGame();
           SceneManager.LoadScene(0);
         }
